@@ -39,6 +39,6 @@ WIKI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "10eaa440311db4b0d8d8bb8a52e6bad06c69657b"
+commit = "d6ced3e8b5e4ffd575a122664a0d593dcf2d1ff8"
 url = "git+https://gitlab.com/stcarrez/ada-wiki.git"
 
