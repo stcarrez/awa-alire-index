@@ -25,7 +25,7 @@ on top of Ada Server Faces.
 [[depends-on]]
 security = "^1.4.1"
 serverfaces = "^1.5.0"
-servletada = "^1.5.3"
+servletada = "^1.6.0"
 utilada = "^2.5.0"
 utilada_unit = "^2.5.0"
 servletada_unit = "^1.5.3"
@@ -38,6 +38,6 @@ SECURITY_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "6059abcf10138ce72034e27244703e142554d40f"
+commit = "10db0531d73304b86af6aca08656e5eb93abd3d6"
 url = "git+https://gitlab.com/stcarrez/ada-asf.git"
 

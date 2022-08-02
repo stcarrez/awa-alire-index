@@ -25,7 +25,7 @@ to provide server web requests.
 
 [[depends-on]]
 security = "^1.4.1"
-servletada = "^1.5.3"
+servletada = "^1.6.0"
 utilada = "^2.5.0"
 
 [gpr-externals]
@@ -35,7 +35,10 @@ ASF_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 [configuration]
 disabled = true
 
+[environment]
+DYNAMO_BUNDLE_PATH.prepend = "${CRATE_ROOT}/bundles"
+
 [origin]
-commit = "fcdc1ea60eab53da29e2de441beefeda35e420ba"
+commit = "10db0531d73304b86af6aca08656e5eb93abd3d6"
 url = "git+https://gitlab.com/stcarrez/ada-asf.git"
 
