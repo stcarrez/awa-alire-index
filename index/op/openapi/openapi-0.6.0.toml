@@ -38,7 +38,10 @@ OPENAPI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 [configuration]
 disabled = true
 
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
 [origin]
-commit = "81230b9d897eaf2600975e05d1cb2b800ac80ecd"
+commit = "8e913343be603554ee384d5c57ed1cc72cf7bd72"
 url = "git+https://gitlab.com/stcarrez/openapi-ada.git"
 

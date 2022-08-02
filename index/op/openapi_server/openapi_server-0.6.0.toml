@@ -30,8 +30,7 @@ specific operations or types.
 utilada = "^2.5.0"
 utilada_xml = "^2.5.0"
 security = "^1.4.1"
-servletada = "^1.5.3"
-servletada_aws = "^1.5.3"
+servletada = "^1.6.0"
 openapi = "^0.6.0"
 
 [gpr-externals]
@@ -41,7 +40,10 @@ OPENAPI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 [configuration]
 disabled = true
 
+[environment]
+PATH.prepend = "${CRATE_ROOT}/scripts"
+
 [origin]
-commit = "81230b9d897eaf2600975e05d1cb2b800ac80ecd"
+commit = "8e913343be603554ee384d5c57ed1cc72cf7bd72"
 url = "git+https://gitlab.com/stcarrez/openapi-ada.git"
 
