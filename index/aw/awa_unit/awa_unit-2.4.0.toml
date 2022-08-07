@@ -4,7 +4,7 @@ version = "2.4.0"
 tags = ["web", "users", "jobs", "framework", "testing"]
 website = "https://gitlab.com/stcarrez/ada-awa"
 
-licenses = ["Apache 2.0"]
+licenses = "Apache-2.0"
 authors = ["Stephane.Carrez@gmail.com"]
 maintainers = ["Stephane.Carrez@gmail.com"]
 maintainers-logins = ["stcarrez"]
@@ -38,6 +38,6 @@ AWA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 
 [origin]
-commit = "e8f380623c5a297d4378675982d7e8753ae41c3c"
+commit = "fce2e62598a5bc829e386f350ab03f3853b9b80d"
 url = "git+https://github.com/stcarrez/ada-awa.git"
 

@@ -62,6 +62,10 @@ servletada = "^1.6.0"
 servletada_aws = "^1.6.0"
 keystoreada = "^1.3.3"
 
+[[actions]]
+type = "post-fetch"
+command = ["sh", "./alire-setup.sh"]
+
 [gpr-externals]
 AWA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
@@ -71,6 +75,6 @@ DYNAMO_SEARCH_PATH.prepend = "${CRATE_ROOT}/awa/plugins"
 DYNAMO_UML_PATH.prepend = "${CRATE_ROOT}/awa/uml"
 
 [origin]
-commit = "e8f380623c5a297d4378675982d7e8753ae41c3c"
+commit = "fce2e62598a5bc829e386f350ab03f3853b9b80d"
 url = "git+https://github.com/stcarrez/ada-awa.git"
 
