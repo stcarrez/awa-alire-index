@@ -47,7 +47,7 @@ xmlada = "any"
 libgpr = "any"
 
 [gpr-externals]
-BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+DYNAMO_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 UTIL_OS = ["win32", "win64", "linux32", "linux64", "macos64", "netbsd32", "netbsd64", "freebsd32", "freebsd64"]
 
 [gpr-set-externals."case(os)".linux."case(word-size)".bits-32]
@@ -77,6 +77,6 @@ PATH.prepend = "${CRATE_ROOT}/bin"
 MANPATH.prepend = "${CRATE_ROOT}/man"
 
 [origin]
-commit = "f20748f2fc87057483502f36f3c5089d0fdb332f"
+commit = "956f1e71c272651acff3d4457718f5a6db053f14"
 url = "git+https://gitlab.com/stcarrez/dynamo.git"
 
