@@ -32,7 +32,7 @@ utilada_xml = "^2.5.0"
 security = "^1.4.1"
 
 [gpr-externals]
-BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+OPENAPI_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 OPENAPI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 
 [configuration]
@@ -42,6 +42,6 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/bin"
 
 [origin]
-commit = "8e913343be603554ee384d5c57ed1cc72cf7bd72"
+commit = "2fb8711aec9f41af7ce5985780cff23c875f8dc6"
 url = "git+https://gitlab.com/stcarrez/openapi-ada.git"
 
