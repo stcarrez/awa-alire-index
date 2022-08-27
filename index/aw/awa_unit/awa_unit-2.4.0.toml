@@ -35,9 +35,9 @@ servletada_unit = "^1.6.0"
 
 [gpr-externals]
 AWA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
-BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+AWA_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 
 [origin]
-commit = "fce2e62598a5bc829e386f350ab03f3853b9b80d"
+commit = "59135a52aff7027f9295888775b9e1cc6cecdc22"
 url = "git+https://github.com/stcarrez/ada-awa.git"
 
