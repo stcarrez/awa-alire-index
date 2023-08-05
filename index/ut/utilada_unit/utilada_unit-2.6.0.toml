@@ -21,7 +21,7 @@ UTIL_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "75add7ec0c1d07a1679408261e4756301d8ba5e7"
+commit = "99ca46a12f0d542348262d67b613d58f0d14c7b5"
 subdir = "./.alire/unit/"
 url = "git+https://gitlab.com/stcarrez/ada-util.git"
 
