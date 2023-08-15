@@ -56,6 +56,6 @@ ADO_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 disabled = true
 
 [origin]
-commit = "cdb17c3e17ec8a5b4eccf5fabfa6b2ffd7e858cf"
+commit = "de4b3c955a9afc50c9ec5ad64c79ae32032718bf"
 url = "git+https://gitlab.com/stcarrez/ada-ado.git"
 
