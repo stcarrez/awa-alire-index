@@ -36,6 +36,6 @@ SERVLET_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "043c8cf81e558a6e8f9397b958217c1ffb91ce75"
+commit = "948cef78055f953d2c27e83fbb3049c62d03d596"
 url = "git+https://gitlab.com/stcarrez/ada-servlet.git"
 
