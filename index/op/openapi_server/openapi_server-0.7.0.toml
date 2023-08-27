@@ -45,7 +45,7 @@ utilada = "^2.6.0"
 utilada_xml = "^2.6.0"
 security = "^1.5.0"
 servletada = "^1.7.0"
-openapi = "^0.7.0"
+openapi = "0.7.0"
 
 [gpr-externals]
 OPENAPI_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
@@ -58,7 +58,7 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/scripts"
 
 [origin]
-commit = "d10b4fb00d3ba065394220b852cd23bb84e6ef08"
+commit = "f25b8315aac5cdaf84ff192bed22ea4d7b7f9e8b"
 subdir = "./.alire/server/"
 url = "git+https://gitlab.com/stcarrez/openapi-ada.git"
 
