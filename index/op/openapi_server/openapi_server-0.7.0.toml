@@ -58,7 +58,7 @@ disabled = true
 PATH.prepend = "${CRATE_ROOT}/scripts"
 
 [origin]
-commit = "f25b8315aac5cdaf84ff192bed22ea4d7b7f9e8b"
+commit = "3e0d722587aa0f6f6339e51d902d421fa38fbf34"
 subdir = "./.alire/server/"
 url = "git+https://gitlab.com/stcarrez/openapi-ada.git"
 
