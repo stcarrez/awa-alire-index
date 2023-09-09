@@ -1,0 +1,43 @@
+description = "OpenAI client library"
+tags = ["rest", "web", "api", "openapi", "openai"]
+name = "openai"
+version = "1.0.0"
+licenses = "Apache-2.0"
+authors = ["Stephane.Carrez@gmail.com"]
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+project-files = ["openai.gpr"]
+website = "https://gitlab.com/stcarrez/ada-openai"
+long-description = """
+
+[OpenAI](https://platform.openai.com/docs/introduction/overview) 
+
+## Alire setup
+
+```
+alr with openai
+```
+
+For the HTTP connection, you can either use AWS or CURL and run one of the following commands:
+
+```
+alr with utilada_curl
+alr with utilada_aws
+```
+
+"""
+
+[[depends-on]]
+openapi = "^0.7.0"
+
+[gpr-externals]
+OPENAI_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+OPENAI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
+
+[configuration]
+disabled = true
+
+[origin]
+commit = "cec7ddceff40badecae5578b417ac650d5b0d9eb"
+url = "git+https://gitlab.com/stcarrez/ada-openai.git"
+
