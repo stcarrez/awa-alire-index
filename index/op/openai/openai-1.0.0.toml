@@ -52,6 +52,6 @@ OPENAI_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "cdab55eecce0b821fdc6c896d6d49764817f7090"
+commit = "e8dc996becba0a897c8a228b433b212442e43e77"
 url = "git+https://gitlab.com/stcarrez/ada-openai.git"
 
