@@ -1,0 +1,24 @@
+name = "printer_toolkitada"
+description = "Printer toolkit to write reports"
+version = "0.1.0"
+long-description = """
+
+"""
+
+authors = ["Stephane.Carrez@gmail.com"]
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+licenses = "Apache-2.0"
+website = "https://gitlab.com/stcarrez/printer-toolkit"
+tags = ["i18n", "nls", "bindings"]
+
+[configuration]
+disabled = true
+
+[[depends-on]]
+ansiada = "^1.0.0"
+
+[origin]
+commit = "8432efc88d3b6451ca6e022e1c341670e690b774"
+url = "git+https://gitlab.com/stcarrez/printer-toolkit.git"
+
