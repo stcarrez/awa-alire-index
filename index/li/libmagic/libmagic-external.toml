@@ -1,4 +1,4 @@
-description = "Recognize the type of data in a file using "magic" numbers"
+description = "Recognize the type of data in a file using 'magic' numbers"
 name = "libmagic"
 
 maintainers = ["Stephane Carrez <Stephane.Carrez@gmail.com>"]
@@ -6,5 +6,6 @@ maintainers-logins = ["stcarrez"]
 
 [[external]]
 kind = "system"
+
 [external.origin."case(distribution)"]
 "debian|ubuntu" = ["libmagic-dev"]
