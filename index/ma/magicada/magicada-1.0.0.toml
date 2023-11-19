@@ -74,10 +74,13 @@ linux = true
 freebsd = true
 '...' = false
 
+[[depends-on]]
+libmagic = "*"
+
 [configuration]
 disabled = true
 
 [origin]
-commit = "669bade2735c1b08e84283be983dae929ad41cb9"
+commit = "f8ea1171ae387686c5d6a7fc76fbdfcef6e60ea8"
 url = "git+https://gitlab.com/stcarrez/ada-libmagic.git"
 
