@@ -1,0 +1,78 @@
+name = "magicada"
+description = "Magic Number Recognition Library Ada binding"
+version = "1.0.0"
+long-description = """
+
+Small Ada binding library to the [libmagic (3)](https://linux.die.net/man/3/libmagci)
+library which is used by the implementation of the
+[file (1)](https://linux.die.net/man/1/file) command.
+
+## Using the library
+
+You must first call the `Magic.Open` function that allocates the data structure
+used by the libmagic library.  The function needs a combination of flags
+represented by the `Magic.Flags` type and several `Magic.MAGIC_XXX` constants.
+
+```
+with Magic;
+...
+   Magic_Cookie : Magic.Magic_t;
+ ...
+   Magic_Cookie := Magic.Open (Magic.MAGIC_MIME);
+   if Magic_Cookie = null then
+      --  Cannot initialize libmagic.
+      return;
+   end if;
+```
+
+Then, you must call `Magic.Load` to load the
+magic patterns which are described in external files.  On Linux, the magic
+patterns are located in `/usr/share/misc/magic.mgc`.
+
+```
+   Err : Integer;
+   ...
+   Err := Magic.Load (Magic_Cookie, "/usr/share/misc/magic.mgc");
+   if Err /= 0 then
+      --  Cannot load magic file
+      return;
+   end if;
+```
+
+Once the library is initialized, you can ask the library to identify
+a file.  It returns a `Interfaces.C.Strings.chars_ptr` which must be
+converted by using the `Value` function to get a `String`.
+The memory is managed by the libmagic library.
+
+```
+with Interfaces.C.Strings;
+   ...
+   Path : Interfaces.C.Strings.chars_ptr;
+   Kind : Interfaces.C.Strings.chars_ptr;
+   ...
+   Path := Interfaces.C.Strings.New_String ("test.file");
+   Kind := Magic.File (Path);
+   Ada.Text_IO.Put_Line (Interfaces.C.Strings.Value (Kind));
+   Interfaces.C.Strings.Free (Path);
+```
+
+"""
+
+authors = ["Stephane.Carrez@gmail.com"]
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+licenses = "Apache-2.0"
+website = "https://gitlab.com/stcarrez/ada-libmagic"
+tags = ["magic", "file", "bindings"]
+
+[gpr-externals]
+MAGICADA_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+MAGICADA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
+
+[configuration]
+disabled = true
+
+[origin]
+commit = "479ed6dd20872ac1bc324a29353eb03f81bc18aa"
+url = "git+https://gitlab.com/stcarrez/ada-libmagic.git"
+
