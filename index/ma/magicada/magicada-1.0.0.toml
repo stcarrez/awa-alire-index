@@ -69,10 +69,15 @@ tags = ["magic", "file", "bindings"]
 MAGICADA_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
 MAGICADA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 
+[available.'case(os)']
+linux = true
+freebsd = true
+'...' = false
+
 [configuration]
 disabled = true
 
 [origin]
-commit = "479ed6dd20872ac1bc324a29353eb03f81bc18aa"
+commit = "669bade2735c1b08e84283be983dae929ad41cb9"
 url = "git+https://gitlab.com/stcarrez/ada-libmagic.git"
 
