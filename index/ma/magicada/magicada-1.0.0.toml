@@ -3,58 +3,43 @@ description = "Magic Number Recognition Library Ada binding"
 version = "1.0.0"
 long-description = """
 
-Small Ada binding library to the [libmagic (3)](https://linux.die.net/man/3/libmagci)
+Small Ada binding library to the [libmagic (3)](https://linux.die.net/man/3/libmagic)
 library which is used by the implementation of the
 [file (1)](https://linux.die.net/man/1/file) command.
 
-## Using the library
+To simplify and help in the use of the magic Ada library, the
+`Magic.Manager` package encapsulates the management of the libmagic library
+and provides high level simple operations to hide the details of interacting
+with the C library.  The package defines the `Magic_Manager` tagged record
+that takes care of the C library interaction and cleaning of the libmagic
+library once the manager is no longer required.  To use it, declare the
+instance and initialize it with the `Initialize` procedure:
 
-You must first call the `Magic.Open` function that allocates the data structure
-used by the libmagic library.  The function needs a combination of flags
-represented by the `Magic.Flags` type and several `Magic.MAGIC_XXX` constants.
-
-```
-with Magic;
-...
-   Magic_Cookie : Magic.Magic_t;
+```Ada
+ with Magic.Manager;
  ...
-   Magic_Cookie := Magic.Open (Magic.MAGIC_MIME);
-   if Magic_Cookie = null then
-      --  Cannot initialize libmagic.
-      return;
-   end if;
+    Mgr : Magic.Manager.Magic_Manager;
+    ...
+       Mgr.Initialize (Magic.MAGIC_MIME, Magic.DEFAULT_PATH);
 ```
 
-Then, you must call `Magic.Load` to load the
-magic patterns which are described in external files.  On Linux, the magic
-patterns are located in `/usr/share/misc/magic.mgc`.
+The first parameter defines a set of flags represented by the `Magic.Flags`
+type to control various options of the libmagic library.   The second
+parameter indicates the default path to the magic file
+(see [magic (5)](https://linux.die.net/man/5/magic)).
+Once configured, the `Identify` functions can be used to identify a content.
+For the first form, a path of the file is given:
 
-```
-   Err : Integer;
-   ...
-   Err := Magic.Load (Magic_Cookie, "/usr/share/misc/magic.mgc");
-   if Err /= 0 then
-      --  Cannot load magic file
-      return;
-   end if;
+```Ada
+ Mime : constant String := Mgr.Identify ("file.ads");
 ```
 
-Once the library is initialized, you can ask the library to identify
-a file.  It returns a `Interfaces.C.Strings.chars_ptr` which must be
-converted by using the `Value` function to get a `String`.
-The memory is managed by the libmagic library.
+With the second form, a `Stream_Element_Array` with the content to identify
+is given to the function.
 
-```
-with Interfaces.C.Strings;
-   ...
-   Path : Interfaces.C.Strings.chars_ptr;
-   Kind : Interfaces.C.Strings.chars_ptr;
-   ...
-   Path := Interfaces.C.Strings.New_String ("test.file");
-   Kind := Magic.File (Path);
-   Ada.Text_IO.Put_Line (Interfaces.C.Strings.Value (Kind));
-   Interfaces.C.Strings.Free (Path);
-```
+## Example
+
+- [examples.adb](https://gitlab.com/stcarrez/ada-libmagic/-/blob/main/examples/src/examples.adb?ref_type=heads)
 
 """
 
@@ -81,6 +66,6 @@ libmagic = "*"
 disabled = true
 
 [origin]
-commit = "f8ea1171ae387686c5d6a7fc76fbdfcef6e60ea8"
+commit = "8a67ea102940bb05ea8eae783f04eb6e8cb33b56"
 url = "git+https://gitlab.com/stcarrez/ada-libmagic.git"
 
