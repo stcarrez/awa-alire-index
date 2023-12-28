@@ -1,0 +1,26 @@
+name = "sciada"
+description = "Collection of Scientific Operations"
+version = "1.0.0"
+long-description = """
+
+
+"""
+
+authors = ["Stephane.Carrez@gmail.com"]
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+licenses = "Apache-2.0"
+website = "https://gitlab.com/stcarrez/ada-sci"
+tags = ["sci", "scientific"]
+
+[gpr-externals]
+SCIADA_BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+SCIADA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
+
+[configuration]
+disabled = true
+
+[origin]
+commit = "b8ef7600b9ea8ed7b83492369ac56ddc5c8ee863"
+url = "git+https://gitlab.com/stcarrez/ada-sci.git"
+
