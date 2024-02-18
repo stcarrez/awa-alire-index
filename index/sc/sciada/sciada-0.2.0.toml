@@ -3,12 +3,14 @@ description = "Collection of Scientific Operations"
 version = "0.2.0"
 long-description = """
 
-SCI Ada provides a collections of algorithms commonly used for data analysis.
+SCI Ada provides a collections of algorithms commonly used for data analysis:
 
 - [SCI.Correlations.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-correlations.ads?ref_type=heads) computes correlations between values,
 - [SCI.Occurrences.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-occurrences.ads?ref_type=heads) helps in identifying occurrences of items,
 - [SCI.Similarities.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-similarities.ads?ref_type=heads) provides metrics to compute similarities between sets.
+- [SCI.Sparse.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-sparse.ads?ref_type=heads) defines sparse arrays.
 - [SCI.Statistics.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-statistics.ads?ref_type=heads) defines some classical statistics operations.
+- [SCI.Vectorizers.*](https://gitlab.com/stcarrez/ada-sci/-/blob/main/src/sci-vectorizers.ads?ref_type=heads) transforms a list of tokens to a vector.
 
 ## Documentation
 
@@ -30,6 +32,6 @@ SCIADA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "b7b6613abeb2af44aec302d1e106055a1078ccd6"
+commit = "0d1ea53e0062fc71a0d4df30be0d919c61283c41"
 url = "git+https://gitlab.com/stcarrez/ada-sci.git"
 
