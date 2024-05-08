@@ -32,6 +32,6 @@ SCIADA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
 disabled = true
 
 [origin]
-commit = "0d1ea53e0062fc71a0d4df30be0d919c61283c41"
+commit = "b935296aab3e1f1cbe02d5733c32244bd45c75d1"
 url = "git+https://gitlab.com/stcarrez/ada-sci.git"
 
