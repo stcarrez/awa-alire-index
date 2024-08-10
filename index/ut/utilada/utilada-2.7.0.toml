@@ -67,6 +67,6 @@ UTIL_OS = "win64"
 disabled = true
 
 [origin]
-commit = "50553b64128e9901716f0b995aa42cc099ca5ece"
+commit = "f98f7d02798d00e10660ec49d46e175f8748be56"
 url = "git+https://gitlab.com/stcarrez/ada-util.git"
 
