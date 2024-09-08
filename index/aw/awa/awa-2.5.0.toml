@@ -50,8 +50,8 @@ project-files = [
 ]
 
 [[depends-on]]
-utilada = "^2.6.0"
-utilada_xml = "^2.6.0"
+utilada = "^2.7.0"
+utilada_xml = "^2.7.0"
 ado = "^2.4.0"
 wikiada = "^1.4.1"
 elada = "^1.8.6"
